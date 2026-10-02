@@ -1,8 +1,8 @@
-FixieWardie
+# FixieWardie
 
 > **Turning hostel maintenance complaints into risk-aware, actionable work orders.**
 
-ARIA is an AI-assisted hostel maintenance and safety platform that analyzes **complaint descriptions, images, location information, and related incidents** to identify potential hazards, assess risk, and route maintenance requests to an appropriate technician.
+FixieWardie is an AI-assisted hostel maintenance and safety platform that analyzes **complaint descriptions, images, location information, and related incidents** to identify potential hazards, assess risk, and route maintenance requests to an appropriate technician.
 
 The system is designed to address three common problems in accommodation maintenance:
 
@@ -12,7 +12,7 @@ The system is designed to address three common problems in accommodation mainten
 
 ---
 
-## 🚀 Project Overview
+# 🚀 Project Overview
 
 A normal complaint system may process:
 
@@ -20,7 +20,7 @@ A normal complaint system may process:
 Category → Bathroom Leakage
 ```
 
-ARIA looks beyond the selected category and analyzes the complete complaint:
+FixieWardie looks beyond the selected category and analyzes the complete complaint:
 
 ```text
 Complaint
@@ -44,7 +44,7 @@ For example, a resident may report:
 
 > "There is water leaking near the electrical switchboard and the lights are flickering."
 
-Although the resident may select **Bathroom Leakage**, ARIA can identify the electrical context, detect relevant hazards, assess the risk, and route the issue toward an appropriate electrical technician.
+Although the resident may select **Bathroom Leakage**, FixieWardie can identify the electrical context, detect relevant hazards, assess the risk, and route the issue toward an appropriate electrical technician.
 
 ---
 
@@ -61,7 +61,7 @@ Although the resident may select **Bathroom Leakage**, ARIA can identify the ele
                                     ▼
                          ┌─────────────────────┐
                          │    FASTAPI BACKEND  │
-                         │      ARIA API       │
+                         │   FIXIEWARDIE API   │
                          └──────────┬──────────┘
                                     │
                                     ▼
@@ -110,7 +110,7 @@ Although the resident may select **Bathroom Leakage**, ARIA can identify the ele
 
 ## 1. AI-Powered Complaint Intake
 
-ARIA analyzes:
+FixieWardie analyzes:
 
 * Complaint description
 * User-selected category
@@ -169,7 +169,7 @@ Visual Evidence
 Combined Understanding
 ```
 
-ARIA can also operate when no image is provided.
+FixieWardie can also operate when no image is provided.
 
 ---
 
@@ -179,7 +179,7 @@ The Risk Engine converts extracted hazards into a structured risk assessment.
 
 The current prototype uses deterministic, rule-based scoring.
 
-Example category weights:
+### Example category weights
 
 | Category   | Prototype Score |
 | ---------- | --------------: |
@@ -190,7 +190,7 @@ Example category weights:
 | Plumbing   |              20 |
 | Security   |              40 |
 
-Example hazard weights:
+### Example hazard weights
 
 | Hazard                 | Prototype Score |
 | ---------------------- | --------------: |
@@ -210,7 +210,7 @@ For example:
 ```text
 Water Leak + Electrical Equipment
               ↓
-       Increased Risk
+        Increased Risk
 ```
 
 ### Prototype severity thresholds
@@ -246,7 +246,7 @@ This allows independently developed components to communicate consistently.
 
 # 🧠 5. Incident Correlation
 
-ARIA is designed to avoid treating every maintenance complaint as an isolated event.
+FixieWardie is designed to avoid treating every maintenance complaint as an isolated event.
 
 Multiple complaints from the same area can potentially represent a connected incident.
 
@@ -262,7 +262,7 @@ Flickering lights
 Thursday
 Burning smell
         ↓
-ARIA
+FixieWardie
         ↓
 Related Incident
 ```
@@ -302,7 +302,7 @@ The current prototype contains sample technicians for demonstrating this workflo
 
 # 📋 7. Work Order Generation
 
-After routing, ARIA creates an actionable work order.
+After routing, FixieWardie creates an actionable work order.
 
 Example:
 
@@ -378,7 +378,7 @@ When a student submits a complaint:
 
 # 🧩 AI vs Deterministic Components
 
-ARIA intentionally separates AI interpretation from operational decision logic.
+FixieWardie intentionally separates AI interpretation from operational decision logic.
 
 ### AI-assisted components
 
@@ -438,7 +438,7 @@ This design makes important operational decisions more transparent and controlla
 The exact structure may evolve as the team integrates the branches, but the architecture is organized around:
 
 ```text
-ARIA/
+FixieWardie/
 │
 ├── backend/
 │   ├── app/
@@ -463,32 +463,46 @@ ARIA/
 
 # 🌿 Team Development
 
-The project was developed as separate modules and integrated through GitHub.
+The project was developed as separate modules and then brought together into a complete integrated system through GitHub.
 
-Conceptually:
+### Team Contributions
+
+| Team Member        | Contribution                                |
+| ------------------ | ------------------------------------------- |
+| **You**            | **AI Intake & Complete System Integration** |
+| **Vastab Sarkar**  | **Routing & Work Management**               |
+| **Shivam**         | **Risk Assessment & Incident Correlation**  |
+| **Vanshika Dewan** | **Frontend**                                |
+
+### Development Flow
 
 ```text
-Member 1
-   │
-   └── Intake Agent
-          │
-Member 2  │
-   │      └── Risk + Incident Engine
-          │
-Member 3  │
-   │      └── Routing + Work Management
-          │
-Member 4  │
-   │      └── Frontend
-          │
-          ▼
-     Integration
-          │
-          ▼
-    Final Prototype
+Vastab Sarkar
+      │
+      └── Routing & Work Management
+                │
+Shivam           │
+      │          └── Risk Assessment &
+      │              Incident Correlation
+      │
+Vanshika Dewan
+      │
+      └── Frontend
+                │
+                ▼
+       ┌─────────────────┐
+       │ AI Intake       │
+       │ + Integration   │
+       │                 │
+       │      You        │
+       └────────┬────────┘
+                │
+                ▼
+       Complete FixieWardie
+             System
 ```
 
-This modular architecture allows individual components to be developed and tested independently before integration.
+The modular architecture allows individual components to be developed and tested independently before being integrated into the complete FixieWardie workflow.
 
 ---
 
@@ -498,7 +512,7 @@ This modular architecture allows individual components to be developed and teste
 
 ```bash
 git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd ARIA
+cd FixieWardie
 ```
 
 ## 2. Create a virtual environment
@@ -537,7 +551,7 @@ API_KEY=your_api_key_here
 
 From the project directory:
 
-```bash
+```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
@@ -573,7 +587,7 @@ POST /analyze
 
 The request contains the complaint information and optional image evidence.
 
-The backend processes the request and returns the structured ARIA analysis to the frontend.
+The backend processes the request and returns the structured FixieWardie analysis to the frontend.
 
 ---
 
@@ -673,7 +687,7 @@ The API is also available through FastAPI Swagger UI at:
 
 # 🛡️ Safety & Limitations
 
-ARIA is a **prototype decision-support and maintenance-routing system**.
+FixieWardie is a **prototype decision-support and maintenance-routing system**.
 
 It should not be treated as:
 
@@ -709,7 +723,7 @@ Potential production extensions include:
 
 # 🎯 Project Goal
 
-ARIA aims to transform hostel maintenance from a simple:
+FixieWardie aims to transform hostel maintenance from a simple:
 
 ```text
 Complaint → Technician
@@ -737,20 +751,27 @@ Create Work Order
 Take Action
 ```
 
-### Core idea
+### Core Idea
 
-> **ARIA converts unstructured hostel complaints and visual evidence into risk-aware incidents and actionable maintenance assignments.**
-
----
-
-## 👥 Team
-
-**Project:** ARIA — Agentic Risk Intelligence for Accommodation
-
-Developed as a collaborative modular prototype using AI, FastAPI, React, rule-based risk analysis, and technician routing.
+> **FixieWardie converts unstructured hostel complaints and visual evidence into risk-aware incidents and actionable maintenance assignments.**
 
 ---
 
-## 📄 License
+# 👥 Team
 
-This project is currently a prototype developed for educational/hackathon purposes.
+### FixieWardie — Agentic Risk Intelligence for Accommodation
+
+| Member             | Role                                    |
+| ------------------ | --------------------------------------- |
+| **You**            | AI Intake & Complete System Integration |
+| **Vastab Sarkar**  | Routing & Work Management               |
+| **Shivam**         | Risk Assessment & Incident Correlation  |
+| **Vanshika Dewan** | Frontend                                |
+
+Developed as a collaborative modular prototype using AI, FastAPI, React, rule-based risk analysis, incident intelligence, and technician routing.
+
+---
+
+# 📄 License
+
+This project is currently a prototype developed for educational and hackathon purposes.
