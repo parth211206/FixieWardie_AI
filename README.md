@@ -4,6 +4,9 @@
 
 FixieWardie is an AI-assisted hostel maintenance and safety platform that analyzes **complaint descriptions, images, location information, and related incidents** to identify potential hazards, assess risk, and route maintenance requests to an appropriate technician.
 
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/0a05112e-7cc9-4a79-80a7-520ace21747e" />
+
+
 The system is designed to address three common problems in accommodation maintenance:
 
 * **Misclassification** — the selected complaint category may not reflect the actual hazard.
@@ -127,6 +130,8 @@ The Intake Agent can:
 * Estimate initial severity
 
 Example:
+<img width="1917" height="1075" alt="Screenshot 2026-10-05 222943" src="https://github.com/user-attachments/assets/a2bf258e-3a75-4ace-a75f-8403284b3d41" />
+
 
 ```json
 {
@@ -178,6 +183,9 @@ FixieWardie can also operate when no image is provided.
 The Risk Engine converts extracted hazards into a structured risk assessment.
 
 The current prototype uses deterministic, rule-based scoring.
+
+<img width="1917" height="1070" alt="Screenshot 2026-10-05 222004" src="https://github.com/user-attachments/assets/784075d1-6a39-43b7-86b1-67a436c13754" />
+
 
 ### Example category weights
 
